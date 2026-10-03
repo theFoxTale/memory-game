@@ -1,0 +1,21 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "Интерактивная игра на поиск пар (Memory Game), разработанная в рамках этапа 1 курса [The Rolling Scopes School](https://rs.school/). Проект выполнен с соблюдением строгих требований к генерации DOM-разметки, модульной архитектуре и чистоте кода.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theFoxTale/memory-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/theFoxTale/memory-game/issues"
+  },
+  "homepage": "https://github.com/theFoxTale/memory-game#readme"
+}
