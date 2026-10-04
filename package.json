@@ -4,7 +4,13 @@
   "description": "Интерактивная игра на поиск пар (Memory Game), разработанная в рамках этапа 1 курса [The Rolling Scopes School](https://rs.school/). Проект выполнен с соблюдением строгих требований к генерации DOM-разметки, модульной архитектуре и чистоте кода.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/ && stylelint src/**/*.scss",
+    "lint:fix": "eslint src/ --fix && stylelint src/**/*.scss --fix",
+    "format": "prettier --write \"src/**/*.{js,scss,json,html}\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +25,9 @@
   },
   "homepage": "https://github.com/theFoxTale/memory-game#readme",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "eslint": "^10.12.0",
+    "globals": "^17.13.0",
     "prettier": "^3.9.9",
     "sass": "^1.105.1",
     "stylelint": "^17.16.0",
