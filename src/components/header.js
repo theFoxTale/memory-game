@@ -1,5 +1,6 @@
-import { createElement } from '../utils/dom.js';
-import { restartGame } from '../services/game.js';
+import { createElement } from '../utils/dom';
+import { restartGame } from '../services/game';
+import { showLeaderboardModal } from "./leaderboardModal";
 
 /**
  * Создает хедер с кнопками управления.
@@ -25,7 +26,7 @@ export function renderHeader() {
 
   // Обработчики
   newGameBtn.addEventListener('click', restartGame);
-  leaderboardBtn.addEventListener('click', onLeaderboardClick);
+  leaderboardBtn.addEventListener('click', showLeaderboardModal);
 
   controls.append(newGameBtn, leaderboardBtn);
   header.append(controls);
@@ -34,8 +35,4 @@ export function renderHeader() {
   header.append(title);
 
   return header;
-}
-
-function onLeaderboardClick() {
-  console.log('Открыть таблицу лидеров');
 }

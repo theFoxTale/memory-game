@@ -2,6 +2,7 @@ import { gameState, resetGameState } from './state';
 import { updateCounters } from '../components/counters';
 import { prepareDeck } from "./api";
 import { renderBoard } from "../components/board";
+import { showVictoryModal } from "../components/victoryModal";
 
 /**
  * Обрабатывает клик по карточке.
@@ -128,7 +129,7 @@ function closeCards(firstCard, secondCard) {
  * Обрабатывает победу (все 8 пар найдены).
  */
 function handleVictory() {
-  console.log(`Победа! Ходов: ${gameState.moves}`);
+  showVictoryModal(gameState.moves);
 }
 
 /**
