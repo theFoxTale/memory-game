@@ -1,8 +1,9 @@
 import { createElement } from './utils/dom.js';
-import { fetchRandomTale } from './services/api.js';
+import { fetchRandomTale, prepareDeck } from './services/api.js';
 import { renderBoard } from './components/board.js';
 import { renderCounters } from './components/counters.js';
 import { gameState } from './services/state.js';
+import { renderHeader } from "./components/header";
 
 import './styles/main.scss';
 
@@ -19,23 +20,21 @@ async function init() {
 
     // Сохраняем данные в состояние
     gameState.currentTale = tale;
-    gameState.cards = tale.cards;
+    gameState.cards = prepareDeck(tale.cards);
 
     // Очищаем сообщение о загрузке
     loadingMessage.remove();
 
-    // Заголовок с названием сказки
-    const title = createElement('h1', ['app__title'], {}, [
-      `${tale.title} (${tale.author})`
-    ]);
-    app.appendChild(title);
+    // Рендерим хедер
+    const header = renderHeader();
+    app.appendChild(header);
 
     // Счетчики
     const counters = renderCounters();
     app.appendChild(counters);
 
     // Игровое поле
-    const board = renderBoard(tale.cards);
+    const board = renderBoard(gameState.cards);
     app.appendChild(board);
 
     console.log(`Загружена сказка: ${tale.title}. На поле ${tale.cards.length} карточек.`);

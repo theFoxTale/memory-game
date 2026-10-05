@@ -1,5 +1,7 @@
-import { gameState, resetGameState } from './state.js';
-import { updateCounters } from '../components/counters.js';
+import { gameState, resetGameState } from './state';
+import { updateCounters } from '../components/counters';
+import { prepareDeck } from "./api";
+import { renderBoard } from "../components/board";
 
 /**
  * Обрабатывает клик по карточке.
@@ -140,4 +142,43 @@ export function startNewGame(startGameFn) {
 
   // Перезапускаем игру
   startGameFn();
+}
+
+/**
+ * Перезапускает игру (кнопка "Новая игра").
+ * Отменяет таймеры, сбрасывает состояние и перемешивает карты.
+ */
+export function restartGame() {
+  // Отменяем таймер закрытия несовпавшей пары
+  if (gameState.closeTimerId !== null) {
+    clearTimeout(gameState.closeTimerId);
+    gameState.closeTimerId = null;
+  }
+
+  // Сбрасываем состояние
+  gameState.flippedCards = [];
+  gameState.moves = 0;
+  gameState.matchedPairs = 0;
+  gameState.isLocked = false;
+
+  // Закрываем модальное окно победы, если оно открыто (функцию добавим позже)
+  const victoryModal = document.querySelector('.modal--open');
+  if (victoryModal) {
+    victoryModal.remove();
+    document.body.style.overflow = '';
+  }
+
+  // Перемешиваем текущую сказку заново
+  const newDeck = prepareDeck(gameState.currentTale.cards);
+  gameState.cards = newDeck;
+
+  // Обновляем счетчики
+  updateCounters(0, 0);
+
+  // Перерисовываем игровое поле
+  const oldBoard = document.querySelector('.board');
+  const newBoard = renderBoard(newDeck);
+  if (oldBoard) {
+    oldBoard.replaceWith(newBoard);
+  }
 }
