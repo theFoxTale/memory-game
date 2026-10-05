@@ -1,5 +1,5 @@
-@import './components/board';
-@import './components/counters';
+@use 'base';
+@use 'components';
 
 body {
   margin: 0;
