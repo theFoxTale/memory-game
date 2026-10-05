@@ -1,4 +1,5 @@
 import { createElement } from '../utils/dom.js';
+import { handleCardClick } from '../services/game.js';
 
 /**
  * Создает DOM-элемент одной карточки.
@@ -8,7 +9,7 @@ import { createElement } from '../utils/dom.js';
  */
 function createCardElement(cardData) {
   const card = createElement('div', ['card'], {
-    'data-pair-id': cardData.pairId,
+    'data-pair-id': String(cardData.pairId),
     'aria-label': 'Закрытая карточка',
   });
 
@@ -18,16 +19,18 @@ function createCardElement(cardData) {
   const cardBack = createElement('div', ['card__back']);
 
   // Лицевая сторона (скрыта)
-  const cardFront = createElement('div', ['card__front']);
-  const cardImage = createElement('img', ['card__image'], {
-    src: cardData.image,
-    alt: cardData.name,
-    loading: 'lazy',
-  });
-  cardFront.appendChild(cardImage);
+  const cardFront = createElement('div', ['card__front'], {}, cardData.name);
+  // const cardImage = createElement('img', ['card__image'], {
+  //   src: cardData.image,
+  //   alt: cardData.name,
+  //   loading: 'lazy',
+  // });
+  // cardFront.appendChild(cardImage);
 
   cardInner.append(cardBack, cardFront);
   card.appendChild(cardInner);
+
+  card.addEventListener('click', () => handleCardClick(card));
 
   return card;
 }
