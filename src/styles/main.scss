@@ -1,0 +1,15 @@
+@use 'base';
+@use 'components';
+@use 'layout';
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f4f1ea;
+  color: #2c241b;
+}
+
+.app {
+  padding: 2rem;
+  text-align: center;
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Сказка о царе Салтане",
+    "author": "А.С. Пушкин",
+    "cards": [
+      { "pairId": 1, "name": "Царь Салтан", "image": "https://placehold.co/200x200/2c241b/f4f1ea?text=Салтан" },
+      { "pairId": 2, "name": "Царица", "image": "https://placehold.co/200x200/2c241b/f4f1ea?text=Царица" },
+      { "pairId": 3, "name": "Гвидон", "image": "https://placehold.co/200x200/2c241b/f4f1ea?text=Гвидон" },
+      { "pairId": 4, "name": "Три старухи", "image": "https://placehold.co/200x200/2c241b/f4f1ea?text=Старухи" },
+      { "pairId": 5, "name": "Царевна-Лебедь", "image": "https://placehold.co/200x200/2c241b/f4f1ea?text=Лебедь" },
+      { "pairId": 6, "name": "Белочка", "image": "https://placehold.co/200x200/2c241b/f4f1ea?text=Белка" },
+      { "pairId": 7, "name": "Черномор и 33 богатыря", "image": "https://placehold.co/200x200/2c241b/f4f1ea?text=Черномор" },
+      { "pairId": 8, "name": "Коршун", "image": "https://placehold.co/200x200/2c241b/f4f1ea?text=Коршун" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Царевна-Лягушка",
+    "author": "А.Н. Афанасьев",
+    "cards": [
+      { "pairId": 1, "name": "Иван-царевич", "image": "https://placehold.co/200x200/1a4d2e/f4f1ea?text=Иван" },
+      { "pairId": 2, "name": "Василиса Премудрая", "image": "https://placehold.co/200x200/1a4d2e/f4f1ea?text=Лягушка" },
+      { "pairId": 3, "name": "Царь-батюшка", "image": "https://placehold.co/200x200/1a4d2e/f4f1ea?text=Царь" },
+      { "pairId": 4, "name": "Серый Волк", "image": "https://placehold.co/200x200/1a4d2e/f4f1ea?text=Волк" },
+      { "pairId": 5, "name": "Игла в яйце", "image": "https://placehold.co/200x200/1a4d2e/f4f1ea?text=Игла" },
+      { "pairId": 6, "name": "Кощей Бессмертный", "image": "https://placehold.co/200x200/1a4d2e/f4f1ea?text=Кощей" },
+      { "pairId": 7, "name": "Баба-Яга", "image": "https://placehold.co/200x200/1a4d2e/f4f1ea?text=Яга" },
+      { "pairId": 8, "name": "Стрела с луком", "image": "https://placehold.co/200x200/1a4d2e/f4f1ea?text=Стрела" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Морозко",
+    "author": "А.Н. Афанасьев",
+    "cards": [
+      { "pairId": 1, "name": "Машенька", "image": "https://placehold.co/200x200/4a6fa5/f4f1ea?text=Маша" },
+      { "pairId": 2, "name": "Морозко", "image": "https://placehold.co/200x200/4a6fa5/f4f1ea?text=Морозко" },
+      { "pairId": 3, "name": "Мачеха", "image": "https://placehold.co/200x200/4a6fa5/f4f1ea?text=Мачеха" },
+      { "pairId": 4, "name": "Родная дочь", "image": "https://placehold.co/200x200/4a6fa5/f4f1ea?text=Дочь" },
+      { "pairId": 5, "name": "Собачка Жучка", "image": "https://placehold.co/200x200/4a6fa5/f4f1ea?text=Жучка" },
+      { "pairId": 6, "name": "Сундук с дарами", "image": "https://placehold.co/200x200/4a6fa5/f4f1ea?text=Сундук" },
+      { "pairId": 7, "name": "Огромная сосна", "image": "https://placehold.co/200x200/4a6fa5/f4f1ea?text=Сосна" },
+      { "pairId": 8, "name": "Дровни", "image": "https://placehold.co/200x200/4a6fa5/f4f1ea?text=Сани" }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+.counters {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+
+  &__item {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    font-weight: bold;
+  }
+
+  &__value {
+    color: #8b0000;
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "Интерактивная игра на поиск пар (Memory Game), разработанная в рамках этапа 1 курса [The Rolling Scopes School](https://rs.school/). Проект выполнен с соблюдением строгих требований к генерации DOM-разметки, модульной архитектуре и чистоте кода.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/ && stylelint src/**/*.scss",
+    "lint:fix": "eslint src/ --fix && stylelint src/**/*.scss --fix",
+    "format": "prettier --write \"src/**/*.{js,scss,json,html}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theFoxTale/memory-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/theFoxTale/memory-game/issues"
+  },
+  "homepage": "https://github.com/theFoxTale/memory-game#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
+    "sass": "^1.105.1",
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "vite": "^8.3.2"
+  }
+}
