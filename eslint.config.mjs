@@ -11,7 +11,7 @@ export default [
   js.configs.recommended,
 
   {
-    files: ['src/**/*.js', 'vite.config.js', 'eslint.config.js'],
+    files: ['src/**/*.js', 'vite.config.js', 'eslint.config.mjs'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
